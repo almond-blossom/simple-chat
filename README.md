@@ -11,5 +11,6 @@
 
 `npm run app1` 1번 앱<br>
 `npm run app2` 2번 앱, 끝나면 삭제 필요 `docker stack rm server`
+`npm run app3` 3번 앱, 끝나면 삭제 필요 `docker stack rm server`
 
 실행 후 `http://localhost:3131`에서 앱 확인.
