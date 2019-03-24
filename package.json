@@ -9,7 +9,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "app1": "node server"
+    "app1": "node server",
+    "app2": "npm run app2-build && docker stack deploy server --compose-file docker-compose.yml",
+    "app2-build": "docker build -t simple-chat ."
   },
   "keywords": [],
   "author": "",

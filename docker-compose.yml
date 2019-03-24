@@ -1,0 +1,9 @@
+version: '3'
+services:
+  server:
+    image: simple-chat
+    deploy:
+      mode: replicated
+      replicas: 4
+    ports:
+      - '3131:3131'
