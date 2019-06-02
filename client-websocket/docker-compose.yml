@@ -7,3 +7,5 @@ services:
       replicas: 4
     ports:
       - '3131:3131'
+    environment:
+      WS_FLAG: 1

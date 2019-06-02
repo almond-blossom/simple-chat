@@ -11,8 +11,12 @@ const server = http.Server(app);
 const io = socketio(server);
 
 let online = 0;
+const clientPath = process.env.WS_FLAG
+  ? 'client-websocket'
+  : 'client-polling';
 
-app.use(express.static(path.join(__dirname, '..', 'client')));
+app.use(express.static(path.join(__dirname, '..', clientPath)));
+
 io.adapter(redis({ host: 'docker.for.mac.localhost', port: 6379 }));
 
 io.on('connection', (socket) => {
