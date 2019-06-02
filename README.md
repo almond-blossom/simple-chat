@@ -10,3 +10,7 @@
 |5|4|Websocket|O|`npm run app5`|채팅공유도 되고 연결도 안정적이다.|
 
 실행 후 `http://localhost:3131`에서 앱 확인.
+
+로그확인: `npm run logs`
+
+실행종료: `npm run rm`

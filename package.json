@@ -17,9 +17,8 @@
     "app5": "npm run build-redis && docker stack deploy server --compose-file client-websocket/docker-compose.yml",
     "build-non-redis": "docker build -t simple-chat -f server-non-redis/Dockerfile .",
     "build-redis": "docker build -t simple-chat -f server-redis/Dockerfile .",
-    "rm": "npm run rm:polling; npm run rm:websocket",
-    "rm:polling": "docker service rm --compose-file client-polling/docker-compose.yml",
-    "rm:websocket": "docker service rm --compose-file client-websocket/docker-compose.yml"
+    "rm": "docker service rm server_server",
+    "logs": "docker service logs -f server_server"
   },
   "keywords": [],
   "author": "",
